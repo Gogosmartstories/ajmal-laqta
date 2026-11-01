@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مسابقة أجمل لقطة</title>
+<meta name="description" content="مسابقة أجمل لقطة لأي معلم من معالم قطر - مدرسة هند بنت عتبة الإعدادية للبنات، قسم الحوسبة وتكنولوجيا المعلومات.">
+<meta property="og:title" content="مسابقة أجمل لقطة لأي معلم من معالم قطر">
+<meta property="og:description" content="مدرسة هند بنت عتبة الإعدادية للبنات - آخر يوم للتسليم الخميس 5/11">
+<meta property="og:image" content="/poster.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#8A1538">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%238A1538'/%3E%3Ccircle cx='12' cy='13' r='4' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M8 8h2l1-2h2l1 2h2' stroke='%23fff' stroke-width='1.6' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+/* Layout: maroon serrated banner (Qatar flag edge) + poster, then one form column. Sand + Gulf-sky accents from the poster. */
+:root{
+  --maroon:#8A1538; --accent-text:#8A1538;
+  --sky:#3d6f9e; --sky-soft:#e4edf6;
+  --gold:#b5843d; --gold-soft:#f4e9d6;
+  --sand:#f7f2ec; --card:#ffffff; --line:#e6dcd1;
+  --fg:#2a1d20; --muted:#6f6266; --err:#b42318; --err-soft:#fdecea; --ok:#2f7d4f; --ok-soft:#e3f0e7;
+  --display:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,sans-serif;
+  --body:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --maroon:#a3274d; --accent-text:#f0b6c6; --sky:#8fb8e0; --sky-soft:#1c2733; --gold:#e0b56f; --gold-soft:#33291b;
+  --sand:#1a1416; --card:#241c1f; --line:#3b2f33; --fg:#f3ecee; --muted:#b5a7ab; --err:#ff8a80; --err-soft:#3a1d1d; --ok:#6cc391; --ok-soft:#1c3326; color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sand);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.7}
+img{max-width:100%}
+[hidden]{display:none!important}
+.wrap{max-width:780px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+.banner{background:var(--maroon);color:#fff;position:relative;overflow:clip;padding-block:calc(28px + env(safe-area-inset-top,0px)) 64px;
+  background-image:radial-gradient(circle at 10% 25%,rgba(255,255,255,.08) 0 90px,transparent 91px),
+                   radial-gradient(circle at 90% 85%,rgba(255,255,255,.06) 0 140px,transparent 141px)}
+.banner::after{content:"";position:absolute;inset:auto 0 -1px 0;height:26px;background:var(--sand);
+  clip-path:polygon(0 100%,0 0,5.55% 100%,11.1% 0,16.65% 100%,22.2% 0,27.75% 100%,33.3% 0,38.85% 100%,44.4% 0,50% 100%,55.55% 0,61.1% 100%,66.65% 0,72.2% 100%,77.75% 0,83.3% 100%,88.85% 0,94.4% 100%,100% 0,100% 100%)}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center}
+.hero > div{min-width:0}
+.school{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:14px;opacity:.95}
+.school b{font-weight:600}
+.school .dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.6}
+.tag{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:5px 14px;border-radius:999px;background:rgba(255,255,255,.14);font-size:13px;font-weight:600}
+.tag svg{width:16px;height:16px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,7vw,54px);line-height:1.25;margin:10px 0 4px;text-wrap:balance}
+h1 em{font-style:normal;color:#f6dca8}
+.sub{margin:0 0 10px;font-weight:600;font-size:clamp(18px,3.4vw,22px)}
+.sub b{color:#f6dca8}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.fact{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:6px 12px;font-size:14px;font-weight:600}
+.fact svg{width:18px;height:18px}
+.poster{width:100%;max-width:360px;justify-self:center;border-radius:18px;background:#fff;padding:6px;box-shadow:0 18px 40px rgba(0,0,0,.3);transform:rotate(-2deg)}
+.poster img{width:100%;height:auto;aspect-ratio:1000/997;object-fit:cover;border-radius:13px;display:block}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.poster{max-width:250px;order:-1}}
+
+main{padding-block:28px 40px;display:grid;gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:16px}
+h2{font-family:var(--display);font-weight:500;font-size:22px;margin:0}
+.hint{color:var(--muted);font-size:14px;margin:0}
+
+.deadline{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;border-color:var(--gold);background:var(--gold-soft)}
+.deadline .cal{flex:none;width:58px;height:58px;border-radius:12px;background:var(--maroon);color:#fff;display:grid;place-items:center;text-align:center;line-height:1.1}
+.deadline .cal b{font-family:var(--display);font-size:24px;display:block}
+.deadline .cal span{font-size:11px}
+.deadline .what{flex:1 1 220px;min-width:0}
+.deadline .what strong{font-family:var(--display);font-size:20px;color:var(--accent-text);display:block}
+.left{font-weight:600;color:var(--gold);font-size:15px}
+
+label{display:block;font-weight:600;margin-bottom:6px}
+.req{color:var(--err)}
+input[type=text]{width:100%;font:inherit;color:var(--fg);background:var(--sand);border:1.5px solid var(--line);border-radius:10px;padding:11px 14px}
+input[type=text]:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 3px var(--sky-soft)}
+.fields{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.fields .full{grid-column:1 / -1}
+@media (max-width:560px){.fields{grid-template-columns:1fr}}
+.field-err{color:var(--err);font-size:13px;margin-top:4px;min-height:1.2em}
+
+.drop{position:relative;display:grid;place-items:center;gap:6px;text-align:center;border:2px dashed var(--line);border-radius:12px;padding:22px;cursor:pointer;font-weight:400;margin:0;transition:border-color .2s,background .2s}
+.drop:hover,.drop.over{border-color:var(--sky);background:var(--sky-soft)}
+.drop svg{width:36px;height:36px;color:var(--sky)}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+.drop:focus-within{border-color:var(--sky);box-shadow:0 0 0 3px var(--sky-soft)}
+.preview{display:flex;gap:14px;align-items:center;margin-top:10px}
+.preview img{width:96px;height:96px;object-fit:cover;border-radius:10px;border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.15);flex:none}
+.preview .info{min-width:0}
+.file-ok{color:var(--ok);font-weight:600;font-size:14px;margin:0;overflow-wrap:anywhere}
+.file-bad{color:var(--err);font-weight:600;font-size:14px;margin:8px 0 0}
+
+.progress{height:8px;background:var(--sky-soft);border-radius:99px;overflow:hidden}
+.progress span{display:block;height:100%;width:0;background:var(--sky);border-radius:99px;transition:width .3s}
+
+.btn{font:inherit;font-weight:600;border:0;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:8px;justify-content:center;width:100%;padding:15px;font-size:17px;background:var(--maroon);color:#fff}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.btn svg{width:20px;height:20px}
+.spin{display:block;width:20px;height:20px;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:s .9s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+.msg{border-radius:10px;padding:12px 14px;font-weight:600;font-size:15px;margin:0}
+.msg.err{background:var(--err-soft);color:var(--err)}
+
+.done,.closed{text-align:center;justify-items:center}
+.tick{width:64px;height:64px;border-radius:50%;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center}
+.tick svg{width:34px;height:34px}
+.closed .tick{background:var(--gold-soft);color:var(--gold)}
+.again{background:transparent;color:var(--accent-text);border:1.5px solid var(--line);width:auto;padding:10px 18px;font-size:15px}
+
+.rules{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.rules li{display:flex;gap:10px;align-items:flex-start}
+.rules li svg{flex:none;width:22px;height:22px;margin-top:3px;color:var(--maroon)}
+:root .rules li svg{color:var(--accent-text)}
+.slogan{font-family:var(--display);font-size:clamp(22px,4.6vw,30px);text-align:center;color:var(--accent-text);margin:0;text-wrap:balance}
+footer{text-align:center;color:var(--muted);font-size:13px;padding-block:0 calc(32px + env(safe-area-inset-bottom,0px))}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation-duration:3s!important}}
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="wrap hero">
+    <div>
+      <div class="school"><b>مدرسة هند بنت عتبة الإعدادية للبنات</b><span class="dot"></span><span>قسم الحوسبة وتكنولوجيا المعلومات</span></div>
+      <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>مسابقة تصوير</span>
+      <h1>مسابقة <em>أجمل لقطة</em></h1>
+      <p class="sub">لأي معلم من معالم <b>قطر</b></p>
+      <div class="facts">
+        <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg>صورة واحدة</span>
+        <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v3h16v-3"/></svg>حتى ١٠ ميجابايت</span>
+        <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>آخر موعد الخميس ٥/١١</span>
+      </div>
+    </div>
+    <div class="poster"><img src="poster.jpg" alt="ملصق مسابقة أجمل لقطة لأي معلم من معالم قطر" width="1000" height="997"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card deadline" aria-label="موعد التسليم">
+    <div class="cal"><span>الخميس</span><b>٥/١١</b></div>
+    <div class="what">
+      <strong>آخر يوم للتسليم: الخميس ٥ نوفمبر</strong>
+      <span class="left" id="left"></span>
+    </div>
+  </section>
+
+  <form class="card" id="entry" novalidate>
+    <h2>نموذج المشاركة</h2>
+    <div class="fields">
+      <div>
+        <label for="name">اسم الطالبة <span class="req">*</span></label>
+        <input type="text" id="name" autocomplete="name" placeholder="مثال: مريم أحمد الكواري">
+        <div class="field-err" id="name-err"></div>
+      </div>
+      <div>
+        <label for="grade">الصف - الشعبة <span class="req">*</span></label>
+        <input type="text" id="grade" placeholder="مثال: الثامن - ٣">
+        <div class="field-err" id="grade-err"></div>
+      </div>
+      <div class="full">
+        <label for="place">اسم المعلم الذي صوّرتِه <span class="req">*</span></label>
+        <input type="text" id="place" list="places" placeholder="مثال: متحف الفن الإسلامي">
+        <datalist id="places">
+          <option value="متحف الفن الإسلامي"><option value="متحف قطر الوطني"><option value="سوق واقف">
+          <option value="الحي الثقافي كتارا"><option value="كورنيش الدوحة"><option value="أبراج الدوحة - الخليج الغربي">
+          <option value="جزيرة اللؤلؤة"><option value="مشيرب قلب الدوحة"><option value="المسجد الحلزوني - مركز عبدالله بن زيد"><option value="قلعة الزبارة">
+          <option value="جامع الإمام محمد بن عبدالوهاب"><option value="لوسيل"><option value="سوق الوكرة"><option value="المكتبة الوطنية">
+        </datalist>
+        <div class="field-err" id="place-err"></div>
+      </div>
+    </div>
+    <div>
+      <label for="photo">الصورة <span class="req">*</span></label>
+      <label class="drop" id="drop">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <span><b>اختاري الصورة</b> أو اسحبيها إلى هنا</span>
+        <span class="hint">صورة واحدة · JPG أو PNG · حتى ١٠ ميجابايت</span>
+        <input type="file" id="photo" accept="image/*">
+      </label>
+      <div class="preview" id="preview" hidden><img id="thumb" alt="معاينة الصورة المختارة"><div class="info" id="file-msg" aria-live="polite"></div></div>
+      <div id="file-bad" aria-live="polite"></div>
+    </div>
+    <div class="progress" id="progress" hidden><span id="bar"></span></div>
+    <p class="msg err" id="err" hidden></p>
+    <button class="btn" id="send" type="submit">
+      <span id="send-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0-5 5m5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg></span>
+      <span id="send-label">إرسال المشاركة</span>
+    </button>
+    <p class="hint" style="text-align:center">لا تحتاجين إلى حساب. تصل الصورة مباشرة إلى لجنة المسابقة.</p>
+  </form>
+
+  <section class="card done" id="done" hidden>
+    <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5 9-10"/></svg></div>
+    <h2>تم استلام مشاركتك</h2>
+    <p class="hint" id="done-text">شكرًا لمشاركتك في مسابقة أجمل لقطة.</p>
+    <button type="button" class="btn again" id="again">إرسال مشاركة أخرى</button>
+  </section>
+
+  <section class="card closed" id="closed" hidden>
+    <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+    <h2>انتهى موعد التسليم</h2>
+    <p class="hint">أُغلق استقبال المشاركات يوم الخميس ٥ نوفمبر. شكرًا لكل من شارك.</p>
+  </section>
+
+  <section class="card">
+    <h2>شروط المسابقة</h2>
+    <ul class="rules">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>أن تكون الصورة من تصويرك الشخصي.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>أن تعبّر الصورة عن أحد معالم قطر.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>عدم استخدام أي برنامج للتعديل على الصورة.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>صورة واحدة لكل طالبة.</li>
+    </ul>
+    <p class="slogan">أبدعي.. والتقطي أجمل ما في قطر</p>
+  </section>
+</main>
+<footer class="wrap">مدرسة هند بنت عتبة الإعدادية للبنات · قسم الحوسبة وتكنولوجيا المعلومات</footer>
+
+<script src="config.js"></script>
+<script>
+(function(){
+  var MAX = 10 * 1024 * 1024;
+  var CFG = window.CONFIG || {};
+  var UPLOAD_URL = CFG.UPLOAD_URL || '';
+  var DEADLINE = new Date(CFG.DEADLINE || '2026-11-05T23:59:59+03:00');
+  var chosen = null, thumbUrl = null;
+  function $(id){ return document.getElementById(id); }
+  function clean(s){ return s.trim().replace(/\s+/g, ' '); }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function ar(n){ return String(n).replace(/\d/g, function(d){ return '٠١٢٣٤٥٦٧٨٩'[d]; }); }
+
+  // deadline
+  function updateLeft(){
+    var ms = DEADLINE - new Date();
+    if (ms <= 0){ $('entry').hidden = true; $('done').hidden = true; $('closed').hidden = false; $('left').textContent = 'انتهى موعد التسليم'; return false; }
+    var days = Math.floor(ms / 86400000), hours = Math.floor(ms % 86400000 / 3600000);
+    $('left').textContent = days >= 1 ? ('متبقٍ ' + ar(days) + (days === 1 ? ' يوم' : days === 2 ? ' يومان' : days <= 10 ? ' أيام' : ' يومًا') + (hours ? ' و' + ar(hours) + ' ساعة' : ''))
+                                      : ('متبقٍ ' + ar(Math.max(1, hours)) + ' ساعة فقط');
+    return true;
+  }
+  updateLeft(); setInterval(updateLeft, 60000);
+
+  function check(file){
+    chosen = null; $('file-bad').innerHTML = ''; $('preview').hidden = true;
+    if (thumbUrl){ URL.revokeObjectURL(thumbUrl); thumbUrl = null; }
+    if (!file) return;
+    var mb = (file.size/1048576).toFixed(1);
+    if (!file.type || file.type.indexOf('image/') !== 0){
+      $('file-bad').innerHTML = '<p class="file-bad">هذا الملف ليس صورة. اختاري صورة.</p>';
+    } else if (file.size > MAX){
+      $('file-bad').innerHTML = '<p class="file-bad">حجم الصورة ' + mb + ' ميجابايت، والحد الأقصى ١٠ ميجابايت.</p>';
+    } else {
+      chosen = file;
+      thumbUrl = URL.createObjectURL(file);
+      $('thumb').src = thumbUrl;
+      $('file-msg').innerHTML = '<p class="file-ok">✓ ' + esc(file.name) + '</p><p class="hint">' + mb + ' ميجابايت</p>';
+      $('preview').hidden = false;
+    }
+  }
+  $('photo').addEventListener('change', function(e){ check(e.target.files[0]); });
+  var drop = $('drop');
+  ['dragenter','dragover'].forEach(function(t){ drop.addEventListener(t, function(e){ e.preventDefault(); drop.classList.add('over'); }); });
+  ['dragleave','drop'].forEach(function(t){ drop.addEventListener(t, function(e){ e.preventDefault(); drop.classList.remove('over'); }); });
+  drop.addEventListener('drop', function(e){ check(e.dataTransfer.files[0]); });
+  ['name','grade','place'].forEach(function(id){ $(id).addEventListener('input', function(){ $(id+'-err').textContent=''; }); });
+
+  var timer = null;
+  function busy(on){
+    $('send').disabled = on;
+    $('send-icon').innerHTML = on ? '<span class="spin"></span>' :
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0-5 5m5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>';
+    $('send-label').textContent = on ? 'جارٍ رفع الصورة… لا تغلقي الصفحة' : 'إرسال المشاركة';
+    $('progress').hidden = !on;
+    clearInterval(timer);
+    if (on){
+      var p = 5; $('bar').style.width = p + '%';
+      timer = setInterval(function(){ p = Math.min(92, p + (95 - p) * 0.08); $('bar').style.width = p + '%'; }, 350);
+    }
+  }
+  function showErr(t){ var e = $('err'); e.textContent = t || ''; e.hidden = !t; }
+  function toBase64(file){
+    return new Promise(function(res, rej){
+      var r = new FileReader();
+      r.onload = function(){ res(String(r.result).split(',')[1]); };
+      r.onerror = function(){ rej(new Error('تعذّرت قراءة الصورة. اختاريها مرة أخرى.')); };
+      r.readAsDataURL(file);
+    });
+  }
+
+  $('entry').addEventListener('submit', function(e){
+    e.preventDefault(); showErr('');
+    if (!updateLeft()) return;
+    var name = clean($('name').value), grade = clean($('grade').value), place = clean($('place').value), ok = true;
+    if (!name){ $('name-err').textContent = 'اكتبي اسم الطالبة.'; ok = false; }
+    if (!grade){ $('grade-err').textContent = 'اكتبي الصف والشعبة.'; ok = false; }
+    if (!place){ $('place-err').textContent = 'اكتبي اسم المعلم الذي صوّرتِه.'; ok = false; }
+    if (!chosen && !$('file-bad').innerHTML){ $('file-bad').innerHTML = '<p class="file-bad">اختاري الصورة (حتى ١٠ ميجابايت).</p>'; ok = false; }
+    if (!chosen) ok = false;
+    if (!ok) return;
+    if (!UPLOAD_URL || UPLOAD_URL.indexOf('script.google.com') === -1){
+      showErr('رابط الرفع غير مضبوط في ملف config.js. يُرجى مراجعة معلمة المادة.'); return;
+    }
+
+    busy(true);
+    toBase64(chosen).then(function(data){
+      return fetch(UPLOAD_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ name: name, grade: grade, place: place, fileName: chosen.name, mimeType: chosen.type, data: data })
+      });
+    }).then(function(r){ return r.json(); })
+    .then(function(res){
+      if (!res || !res.ok) throw new Error((res && res.error) || 'حدث خطأ غير متوقع.');
+      $('bar').style.width = '100%';
+      busy(false);
+      $('entry').hidden = true;
+      $('done-text').textContent = 'شكرًا ' + name + '، وصلت صورتك لـ«' + place + '» إلى لجنة المسابقة بنجاح.';
+      $('done').hidden = false;
+      window.scrollTo({ top: $('done').offsetTop - 20, behavior: 'smooth' });
+    }).catch(function(err){
+      busy(false);
+      var m = err && err.message;
+      if (!m || /fetch|network|json|Failed|Load/i.test(m)) m = 'تحقّقي من الاتصال بالإنترنت ثم حاولي مرة أخرى.';
+      showErr('لم يكتمل الرفع: ' + m);
+    });
+  });
+
+  $('again').addEventListener('click', function(){
+    $('entry').reset(); check(null);
+    $('done').hidden = true; $('entry').hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
